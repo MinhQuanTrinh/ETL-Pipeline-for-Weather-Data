@@ -1,4 +1,4 @@
-# ETL-Pipeline-for-Weather-Data
+# ETL Pipeline for Weather Data of Perth
 Simple AWS ETL Pipeline for data from OpenWeather API
 
 This project aims to display my capability of creating a simple ETL Data Pipeline from Scratch. The Components of this Pipeline are:
