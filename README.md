@@ -16,3 +16,6 @@ The API from OpenWeather is used to collect weather data of Perth (WA).
 The data is transformed using Pandas and converted to csv.
 The csv file is then loaded into AWS S3 Bucket.
 
+#28/01/2025:
+- Issue with installing awscli: E: Package 'awscli' has no installation candidate --> result in csv file cannot be loaded into S3 but saved in
+the working directory.
