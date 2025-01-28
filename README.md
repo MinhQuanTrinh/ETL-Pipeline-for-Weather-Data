@@ -15,6 +15,7 @@ Apache Airflow orchestrates the following:
 The API from OpenWeather is used to collect weather data of Perth (WA).
 The data is transformed using Pandas and converted to csv.
 The csv file is then loaded into AWS S3 Bucket.
+![image](https://github.com/user-attachments/assets/3942ce60-176a-4ce7-ae45-ffea9e56e46e)
 
 #28/01/2025:
 - Issue with installing awscli: E: Package 'awscli' has no installation candidate --> result in csv file cannot be loaded into S3 but saved in
