@@ -9,7 +9,7 @@ This project aims to display my capability of creating a simple ETL Data Pipelin
   5. Apache Airflow for Orchestration
 
 This pipeline is based on the tutorial video https://www.youtube.com/watch?v=uhQ54Dgp6To&list=PLWB43E_5NBT-f2Wlab5wdaPiENe3m-gFz&index=4.
-There are some changes in Airflow setup as the versions for Ubuntu are different.
+There are some changes in Airflow setup as the versions for Ubuntu are different. The maincode weather_dag.py is located: /airflow/dags/weather_dag.py
 
 Apache Airflow orchestrates the following:
 The API from OpenWeather is used to collect weather data of Perth (WA).
