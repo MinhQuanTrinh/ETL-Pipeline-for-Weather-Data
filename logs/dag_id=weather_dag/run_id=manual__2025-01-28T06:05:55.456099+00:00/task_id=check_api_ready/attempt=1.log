@@ -1,0 +1,28 @@
+[2025-01-28T06:05:59.993+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T06:06:00.001+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_dag.check_api_ready manual__2025-01-28T06:05:55.456099+00:00 [queued]>
+[2025-01-28T06:06:00.007+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_dag.check_api_ready manual__2025-01-28T06:05:55.456099+00:00 [queued]>
+[2025-01-28T06:06:00.007+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2025-01-28T06:06:00.025+0000] {taskinstance.py:2889} INFO - Executing <Task(HttpSensor): check_api_ready> on 2025-01-28 06:05:55.456099+00:00
+[2025-01-28T06:06:00.031+0000] {standard_task_runner.py:72} INFO - Started process 2631 to run task
+[2025-01-28T06:06:00.033+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'weather_dag', 'check_api_ready', 'manual__2025-01-28T06:05:55.456099+00:00', '--job-id', '16', '--raw', '--subdir', '/home/ubuntu/airflow/dags/weather_dag.py', '--cfg-path', '/tmp/tmp7veubsvs']
+[2025-01-28T06:06:00.037+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask check_api_ready
+[2025-01-28T06:06:00.072+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_dag.check_api_ready manual__2025-01-28T06:05:55.456099+00:00 [running]> on host ip-172-31-38-205.ap-southeast-2.compute.internal
+[2025-01-28T06:06:00.265+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='trinhminhquan2810@gmail.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='weather_dag' AIRFLOW_CTX_TASK_ID='check_api_ready' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T06:05:55.456099+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T06:05:55.456099+00:00'
+[2025-01-28T06:06:00.265+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-28T06:06:00.266+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-28T06:06:00.266+0000] {logging_mixin.py:190} INFO - Current task name:check_api_ready state:running start_date:2025-01-28 06:06:00.002204+00:00
+[2025-01-28T06:06:00.266+0000] {logging_mixin.py:190} INFO - Dag name:weather_dag and current dag run status:running
+[2025-01-28T06:06:00.266+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T06:06:00.267+0000] {baseoperator.py:421} WARNING - HttpSensor.execute cannot be called outside TaskInstance!
+[2025-01-28T06:06:00.267+0000] {http.py:140} INFO - Poking: /data/2.5/weather?q=Perth&APPID=dd89218a997dc67bbb95545d99c64232
+[2025-01-28T06:06:00.271+0000] {base.py:84} INFO - Retrieving connection 'weathermap_api'
+[2025-01-28T06:06:00.460+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2025-01-28T06:06:00.464+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T06:06:00.465+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_dag, task_id=check_api_ready, run_id=manual__2025-01-28T06:05:55.456099+00:00, execution_date=20250128T060555, start_date=20250128T060600, end_date=20250128T060600
+[2025-01-28T06:06:00.477+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-28T06:06:00.477+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-28T06:06:00.478+0000] {logging_mixin.py:190} INFO - Dag name:weather_dag queued_at:2025-01-28 06:05:55.487283+00:00
+[2025-01-28T06:06:00.478+0000] {logging_mixin.py:190} INFO - Task hostname:ip-172-31-38-205.ap-southeast-2.compute.internal operator:HttpSensor
+[2025-01-28T06:06:00.492+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-28T06:06:00.512+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T06:06:00.520+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
